@@ -1,0 +1,11 @@
+{
+  "name": "com.elicxir.datasave",
+  "version": "1.0.0",
+  "displayName": "Data Save Manager",
+  "description": "simple manager of saving and loading data",
+  "author": {
+    "name": "ELICXIR"
+  },
+  "dependencies": {
+  }
+}
