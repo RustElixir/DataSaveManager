@@ -1,7 +1,10 @@
+# DataSaveManager
+simple system of saving and loading data
 
 ## Install
 
-### Install InputManager
+### Install DataSaveManager
 Window -> Package Manager -> AddPackage fom git url
-https://github.com/RustElixir/InputManager
+https://github.com/elicxir/DataSaveManager.git
+
 ## How to Use
