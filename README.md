@@ -5,6 +5,7 @@ simple system of saving and loading data
 
 ### Install DataSaveManager
 Window -> Package Manager -> AddPackage fom git url
+
 https://github.com/elicxir/DataSaveManager.git
 
 ## How to Use
@@ -12,6 +13,7 @@ https://github.com/elicxir/DataSaveManager.git
 ### DataHandler
 
 DataHandler is a class for handling data in selected files.
+
 By specifying the path of a file, you can obtain a DataHandler for that file, and you can read and write data in the file through the DataHandler.
 
 ### Get DataHandler
