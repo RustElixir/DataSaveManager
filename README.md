@@ -34,7 +34,19 @@ DataHandler has the concept of a key, and data can be exchanged based on this ke
 Store TestData type data in DataHandler using the key "data_key".
 Execute Save() of DataHandler with the data stored to save the changes to a file.
 
+Don't forget to add System.Serializable attribute to the class you want to save. 
+
 ```cs
+[System.Serializable]
+public class TestData{
+  public int value;
+}
+```
+
+```cs
+  TestData data=new TestData();
+  data.value=3156;
+
   var dh= DataSaveManager.SaveManager.Load("xxx.txt");
   dh.SetData<TestData>("data_key", data);
   dh.Save();
@@ -61,15 +73,23 @@ In that case, KeyNotFoundException will be thrown, so you can use try catch to d
 
 ```
 
-## SaveManager
+### SaveManager
 |  Functions | Description |
 | ---- | ---- |
 |DataHandler Load(string filename)|Get the DataHandler for the specified file.<br>Specify the name of a file under the Application.persistentDataPath folder|
 |void Delete(string filename)|Deletes the specified file.<br>Specify the name of a file under the Application.persistentDataPath folder|
-## DataHandler
+### DataHandler
 
 |  Functions | Description |
 | ---- | ---- |
 |T GetData<T>(string key)|Retrieve data from DataHandler based on key.|
 |bool SetData<T>(string key, T obj)|Stores data in DataHandler using key and class instance<br>Returns true if an existing value is updated, or false if a new value is stored.|
 |void Save()|Save the DataHandler to a file.|
+
+
+### DataType Restrection
+These may not work.
+
+- Dictionary<>
+- List<List<>>
+- property (get,set)
